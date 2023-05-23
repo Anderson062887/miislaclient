@@ -9,7 +9,7 @@ function App() {
     <div className="App">
       
      <Header />
-     <h1>welcome to Mi isla rd, this site is comming soon</h1>
+     <h1>Welcome to Mi isla RD, This site is comming soon</h1>
     </div>
   );
 }

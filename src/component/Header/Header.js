@@ -1,11 +1,14 @@
 
+import {useContext} from "react" 
 import "./Headercss.css"
-import {Nav} from "./Nav";
+import {SeachBox} from "./SeachUi";
 import{GiIsland} from "react-icons/gi"
 import {IoMenuOutline} from "react-icons/io5"
 import {HeaderSeach} from "./smallViewheaderSeach";
 import useBrowserSize from "../utilhooks/windowWidthhook";
-import{BiUserCircle} from "react-icons/bi"
+import{BiUserCircle} from "react-icons/bi";
+import windowContext from "../Context";
+
 
 const UserUi =()=>{
 
@@ -18,13 +21,15 @@ const UserUi =()=>{
 
 
 export const Header = ()=>{
-    const currentWith = useBrowserSize()
+  const smallViewSize = useContext(windowContext)
+  
+    const currentWith = useBrowserSize();
     const links = ["actividades","ciudades","cultura"]
     return (<header className="header">
-       { currentWith >= 750?
+       { currentWith >= smallViewSize?
         <div className="header-wrap">
-          <div><GiIsland size={40} color={"blue"}></GiIsland></div>
-          <Nav links={links} />
+          <div><GiIsland size={40} color={"rgb(13, 84, 164)"}></GiIsland></div>
+          <SeachBox  />
           <UserUi /> 
           
           

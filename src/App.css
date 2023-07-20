@@ -3,6 +3,7 @@
   border:var(--text-border);
   margin: 0px auto;
   padding: var(--padding-md);
+
 }
 
 
@@ -13,6 +14,11 @@
 }
 
 @media (min-width: 750px) {
+  .App  {
+    width: 90%;
+  }
+}
+@media (min-width: 1150px) {
   .App  {
     width: 80%;
   }

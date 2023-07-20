@@ -1,11 +1,12 @@
 .header-wrap{
-    width: 80%;
+    width: 100%;
     margin: 0 auto;
     padding: 0 20px;
     display: flex;
     align-items: center;
+    justify-content: flex-end;
+    /* border:1px solid rgb(147, 38, 38); */
 }
-
 
 /* .logo{
     height: 800px;
@@ -22,12 +23,26 @@
 
 /* nav style */
 nav{
-    width: 80%;
+    width: 100%;
     margin-left: auto;
     padding: 0;
+    display: flex;
+    /* border:1px solid #333; */
 }
-nav ul {
-    /* border:1px solid; */
+
+.user-ui{
+    /* height: 40px; */
+    width: 100px;
+    display: flex;
+    justify-content: space-around;
+    box-shadow: var(--shadow-solid);
+    margin-left: 20px;
+    padding: 7px;
+    border-radius: 20px;
+    cursor: pointer;
+}
+/* nav ul {
+
     display: flex;
     justify-content: flex-end;
     font-size: 1.2rem;
@@ -36,7 +51,7 @@ nav ul {
 nav ul li{
     list-style-type: none;
     margin: 0 16px;
-}
+} */
 
 /* seach box */
 .header-seach-wrapper{
@@ -47,7 +62,7 @@ nav ul li{
     justify-content: center;
     border-radius: 30px;
     padding: 4px 10px;
-    margin: 10px auto;
+    margin: 8px auto;
 }
 .header-seach-icon{
     display: flex;
@@ -74,4 +89,64 @@ nav ul li{
     border-radius: 50%;
     color: var(--light-text);
     box-shadow: var(--shadow-solid);
+    cursor: pointer;
 }
+/* wide screen */
+.seach-wrapper{
+    font-size: 0.9rem;
+    box-shadow: var(--shadow-mid);
+    display: flex;
+  
+  
+    /* align-items: center; */
+    /* justify-content: center; */
+    border-radius: 30px;
+    padding: 4px 4px;
+    margin: 10px 0;
+    width: 40%;
+    /* border: 1px solid; */
+    margin-left: auto;
+}
+.seach-wrapper input{
+    width: 80%;
+    border: none;
+    margin-left: auto;
+    outline: none;
+}
+
+.nav-seach-icon{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 40px;
+    height: 40px;
+    color: var(--light-text);
+    box-shadow: var(--shadow-solid);
+    border-radius: 50%;
+    background-color: var(--brand-primary-color);
+    margin-left: auto;
+   
+}
+/* media query */
+@media (min-width: 550px) {
+    .header-wrap{
+      width: 90%;
+    }
+  }
+  
+  @media (min-width: 750px) {
+    .header-wrap {
+      width: 100%;
+    }
+    .seach-wrapper{
+        width: 50%;
+    }
+  }
+  @media (min-width: 1150px) {
+    .header-wrap {
+      width: 80%;
+    }
+    .seach-wrapper{
+        width: 40%;
+    }
+  }

@@ -13,8 +13,11 @@
     border:1px solid rgb(147, 38, 38);
 }
 
+
+
 .user-ui{
     /* height: 40px; */
+    position: relative;
     width: 100px;
     display: flex;
     justify-content: space-around;
@@ -23,6 +26,7 @@
     padding: 7px;
     border-radius: 20px;
     cursor: pointer;
+    
 }
 
 /* seach box small screen */

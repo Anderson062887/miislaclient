@@ -6,6 +6,22 @@
 
 }
 
+.tooltip{
+  position: absolute;
+  top: 42px;
+  border-radius: 10px;
+  box-shadow: var(--shadow-mid);  
+}
+.tooltip ul{
+  padding: 5px 40px;
+  width: 100%;
+  height: 100%;
+}
+.tooltip ul li{
+  padding: 4px;
+}
+
+
 
 @media (min-width: 550px) {
   .App  {

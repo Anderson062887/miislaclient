@@ -13,7 +13,6 @@ import{UserUiSetting} from "./SettingUi";
 
 export const Header = ()=>{
   const smallViewSize = useContext(windowContext)
-  
     const currentWith = useBrowserSize();
 
     return (<header className="header">

@@ -1,5 +1,6 @@
 import { ToolTip } from "../ToolTip";
 import useHover from "../utilhooks/Hoverhook";
+import useActiveOnClick from "../utilhooks/clickActivehook";
 import{BiUserCircle} from "react-icons/bi";
 import {IoMenuOutline} from "react-icons/io5"
 
@@ -7,11 +8,12 @@ import {IoMenuOutline} from "react-icons/io5"
 
 export const UserUiSetting =()=>{
     const [hovering,hoverActions] = useHover();
+    const [isclick,handleClick] = useActiveOnClick()
    
      return(
-       <div className="user-ui" {...hoverActions}>
+       <div className="user-ui" {...hoverActions} onClick={handleClick}>
          <IoMenuOutline size={27} />
          <BiUserCircle size={27} color={"rgb(13, 84, 164)"}/>
-           {hovering && <ToolTip links={["login","profile","settings"]} />}
+           {isclick && <ToolTip links={["logout","profile","settings"]} />}
        </div>)
    }
